@@ -13,4 +13,4 @@ services:
       POSTGRES_URL: "postgresql://postgres_user:strongP%40ss123%21@bg08gs8occ0ggw40o44cc4kc:5432/postgres" # set this to your Coolify Postgres host (domain or internal address)
       POSTGRES_PORT: 5432 # set this to your Coolify Postgres port (usually 5432)
     ports:
-      - "8502:8502"
+      - "8501:8501"
