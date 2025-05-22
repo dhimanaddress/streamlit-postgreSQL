@@ -4,7 +4,7 @@ services:
   streamlit:
     build:
       context: .
-      dockerfile: Dockerfile.streamlit
+      dockerfile: dockerfile.streamlit
     container_name: streamlit_app
     environment:
       POSTGRES_USER: 'postgres_user' # set this to your Coolify Postgres user
