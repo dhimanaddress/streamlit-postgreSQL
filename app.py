@@ -1,16 +1,19 @@
+#%%
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 from sqlalchemy import create_engine
 import os
 
+#%%
 # Use environment variables (Coolify supports them)
 DB_USER = os.getenv("POSTGRES_USER", "postgres_user")
 DB_PASS = os.getenv("POSTGRES_PASSWORD", '2@4p>y@nUTS$qr"')
-DB_HOST = os.getenv("POSTGRES_HOST", "postgresql-db-host")
+DB_HOST = os.getenv("POSTGRES_HOST", "postgres_host")  # fixed default
 DB_PORT = os.getenv("POSTGRES_PORT", "5432")
 DB_NAME = os.getenv("POSTGRES_DB", "postgres")
 
+#%%
 # Connection string
 DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 

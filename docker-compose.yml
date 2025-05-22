@@ -3,12 +3,12 @@ version: '3.8'
 services:
   postgres:
     image: postgres:16
-    container_name: postgres
+    container_name: postgres_host
     restart: always
     environment:
       POSTGRES_USER: postgres_user
-      POSTGRES_PASSWORD: postgres_pwd
-      POSTGRES_DB: postgres_db
+      POSTGRES_PASSWORD: '2@4p>y@nUTS$qr"'
+      POSTGRES_DB: postgres
     ports:
       - "5432:5432"
     volumes:
@@ -21,6 +21,12 @@ services:
     container_name: streamlit_app
     depends_on:
       - postgres
+    environment:
+      POSTGRES_USER: postgres_user
+      POSTGRES_PASSWORD: '2@4p>y@nUTS$qr"'
+      POSTGRES_DB: postgres
+      POSTGRES_HOST: postgres_host
+      POSTGRES_PORT: 5432
     ports:
       - "8501:8501"
 
