@@ -1,0 +1,11 @@
+# Dockerfile.postgres (optional – often just use official image in docker-compose)
+FROM postgres:16
+
+# Set environment variables (used at runtime)
+ENV POSTGRES_USER=postgres_user
+ENV POSTGRES_PASSWORD=postgres_pwd
+ENV POSTGRES_DB=postgres_db
+
+ENV POSTGRES_INITDB_ARGS="--encoding=UTF8 --locale=C.UTF-8"
+
+EXPOSE 5432
