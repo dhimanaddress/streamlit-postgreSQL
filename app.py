@@ -19,6 +19,7 @@ DB_NAME = os.getenv("POSTGRES_DB")
 DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 # postgresql://postgres_user:strongP%40ss123%21@bg08gs8occ0ggw40o44cc4kc:5432/postgres
 # SQLAlchemy engine
+st.write(DATABASE_URL)
 engine = create_engine(DATABASE_URL)
 
 st.title("PostgreSQL + Streamlit (Coolify)")
