@@ -16,9 +16,9 @@ DB_NAME = os.getenv("POSTGRES_DB")
 
 #%%
 # Connection string
-DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+#  DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 # postgresql://[user]:[password]@yg0c48okc8skscco0wkws0gc:5432/[database] 
-# postgresql://postgres_user:strongP%40ss123%21@bg08gs8occ0ggw40o44cc4kc:5432/postgres
+DATABASE_URL = "postgres://postgres:QjRfozIQ4xzQj1oiOUIyvDSrgNrFCXwZosvgFOXVKmhO4h7uBbYqKfXhbGpNq4pI@jc80c4ow8kw04gcg8c4kcc4g:5432/postgres"
 # SQLAlchemy engine
 engine = create_engine(DATABASE_URL)
 
