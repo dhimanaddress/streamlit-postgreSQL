@@ -11,6 +11,6 @@ services:
       POSTGRES_PASSWORD: "8Q5PD:p#5-4acY4" # set this to your Coolify Postgres password
       POSTGRES_DB: "postgres" # set this to your Coolify Postgres database name
       POSTGRES_HOST: "69.62.85.176" # set this to your Coolify Postgres host (domain or internal address)
-      POSTGRES_PORT: 5432 # set this to your Coolify Postgres port (usually 5432)
+      POSTGRES_PORT: 3000 #5432 # set this to your Coolify Postgres port (usually 5432)
     ports:
       - "8501:8501"
