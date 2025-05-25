@@ -12,13 +12,13 @@ DB_PASS = os.getenv("POSTGRES_PASSWORD")
 DB_HOST = os.getenv("POSTGRES_HOST")  # fixed default
 DB_PORT = os.getenv("POSTGRES_PORT")
 DB_NAME = os.getenv("POSTGRES_DB")
-# POSTGRES_URL = os.getenv("POSTGRES_URL")  # fixed default
+DATABASE_URL = os.getenv("DATABASE_URL")  # fixed default
 
 #%%
 # Connection string
 #  DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 # postgresql://[user]:[password]@yg0c48okc8skscco0wkws0gc:5432/[database] 
-DATABASE_URL = "postgresql://postgres:QjRfozIQ4xzQj1oiOUIyvDSrgNrFCXwZosvgFOXVKmhO4h7uBbYqKfXhbGpNq4pI@jc80c4ow8kw04gcg8c4kcc4g:5432/postgres"
+# DATABASE_URL = "postgresql://postgres:QjRfozIQ4xzQj1oiOUIyvDSrgNrFCXwZosvgFOXVKmhO4h7uBbYqKfXhbGpNq4pI@jc80c4ow8kw04gcg8c4kcc4g:5432/postgres"
 # SQLAlchemy engine
 engine = create_engine(DATABASE_URL)
 
