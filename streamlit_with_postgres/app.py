@@ -8,10 +8,10 @@ import os
 #%%
 # Use environment variables (Coolify supports them)
 DB_USER = os.getenv("DB_USER")
-DB_PASS = os.getenv("DB_PASSWORD")
-DB_HOST = os.getenv("DBS_HOST")  # fixed default
+DB_PASS = os.getenv("DB_PASS")
+DB_HOST = os.getenv("DB_HOST")  # fixed default
 DB_PORT = os.getenv("DB_PORT")
-DB_NAME = os.getenv("DBS_DB")
+DB_NAME = os.getenv("DB_NAME")
 
 DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"  # updated DATABASE_URL
 
