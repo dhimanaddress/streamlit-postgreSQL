@@ -5,9 +5,9 @@ services:
     image: postgres:16
     container_name: postgres-1
     environment:
-      POSTGRES_DB: mydatabase
+      POSTGRES_DB: postgres_db
       POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
+      POSTGRES_PASSWORD: mypa&&word
     volumes:
       - pg_data:/var/lib/postgresql/data
     restart: unless-stopped
@@ -15,14 +15,14 @@ services:
   streamlit:
     build:
       context: .
-      dockerfile: docker.streamlit
+      dockerfile: dockerfile.streamlit
     container_name: streamlit-app
     environment:
       DB_HOST: postgres-1
       DB_PORT: 5432
-      DB_NAME: mydatabase
+      DB_NAME: postgres_db
       DB_USER: myuser
-      DB_PASS: mypassword
+      DB_PASS: mypa&&word
     ports:
       - "8501:8501"
     depends_on:

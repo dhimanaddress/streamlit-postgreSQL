@@ -15,11 +15,6 @@ DB_NAME = os.getenv("POSTGRES_DB")
 DATABASE_URL = os.getenv("DATABASE_URL")  # fixed default
 
 #%%
-# Connection string
-#  DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-# postgresql://[user]:[password]@yg0c48okc8skscco0wkws0gc:5432/[database] 
-# DATABASE_URL = "postgresql://postgres:QjRfozIQ4xzQj1oiOUIyvDSrgNrFCXwZosvgFOXVKmhO4h7uBbYqKfXhbGpNq4pI@jc80c4ow8kw04gcg8c4kcc4g:5432/postgres"
-# SQLAlchemy engine
 engine = create_engine(DATABASE_URL)
 
 st.title("PostgreSQL + Streamlit (Coolify)")
