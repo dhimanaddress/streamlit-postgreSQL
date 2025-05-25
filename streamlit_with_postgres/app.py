@@ -6,8 +6,16 @@ from sqlalchemy import create_engine
 import os
 
 #%%
-DATABASE_URL = os.getenv("DATABASE_URL")  # fixed default
+# Use environment variables (Coolify supports them)
+DB_USER = os.getenv("DB_USER")
+DB_PASS = os.getenv("DB_PASSWORD")
+DB_HOST = os.getenv("DBS_HOST")  # fixed default
+DB_PORT = os.getenv("DB_PORT")
+DB_NAME = os.getenv("DBS_DB")
 
+DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"  # updated DATABASE_URL
+
+#%%
 engine = create_engine(DATABASE_URL)
 
 st.title("PostgreSQL + Streamlit (Coolify)")
